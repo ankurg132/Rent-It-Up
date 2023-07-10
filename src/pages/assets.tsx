@@ -1,4 +1,4 @@
-import { Box, Heading, Input, Text, Textarea, Button, Flex, FormCotrol, FormLabel } from "@chakra-ui/react";
+import { Box, Heading, Input, Text, Textarea, Button, Flex, FormLabel } from "@chakra-ui/react";
 import { NextPage } from "next";
 import AppLayout from "../components/AppLayout";
 import React, { useEffect, useState } from "react";
