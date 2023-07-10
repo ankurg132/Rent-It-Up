@@ -56,9 +56,9 @@ const Assets: NextPage = () => {
     console.log(file);
   };
 
-  // const mint = async () => {
-  //   console.log("Uploading file...");
-  //   console.log(file);
+  const mint = async () => {
+    console.log("Uploading file...");
+    console.log(file);
   //   const rootCid = await client.put([file]);
   //   console.log("Uploading file... stage2");
   //   const res = await client.get(rootCid);
@@ -82,7 +82,7 @@ const Assets: NextPage = () => {
   //     console.log(transactionId);
   //     return fcl.tx(transactionId).onceSealed();
   //   });
-  // };
+  };
   
 
   // useEffect(() => {
