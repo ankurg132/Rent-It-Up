@@ -35,7 +35,7 @@ const Assets: NextPage = () => {
 
   const setUserTx = async () => {
     console.log("Setting up user");
-    const transactionID = await fcl.send([
+    // const transactionID = await fcl.send([
   //     fcl.transaction(setupUserTx),
   //     fcl.args([]),
   //     fcl.proposer(fcl.authz),
