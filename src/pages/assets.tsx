@@ -33,21 +33,21 @@ const Assets: NextPage = () => {
   const [priceStack, setPriceStack] = useState<string>();
   const [pricePerDay, setPricePerDay] = useState<string>();
 
-  const setUserTx = async () => {
-    console.log("Setting up user");
-    const transactionID = await fcl.send([
-      fcl.transaction(setupUserTx),
-      fcl.args([]),
-      fcl.proposer(fcl.authz),
-      fcl.payer(fcl.authz),
-      fcl.authorizations([fcl.authz]),
-      fcl.limit(999),
-    ]).then((response: any) => {
-      const { transactionId } = response;
-      console.log(transactionId);
-      return fcl.tx(transactionId).onceSealed();
-    });
-  };
+  // const setUserTx = async () => {
+  //   console.log("Setting up user");
+  //   const transactionID = await fcl.send([
+  //     fcl.transaction(setupUserTx),
+  //     fcl.args([]),
+  //     fcl.proposer(fcl.authz),
+  //     fcl.payer(fcl.authz),
+  //     fcl.authorizations([fcl.authz]),
+  //     fcl.limit(999),
+  //   ]).then((response: any) => {
+  //     const { transactionId } = response;
+  //     console.log(transactionId);
+  //     return fcl.tx(transactionId).onceSealed();
+  //   });
+  // };
   
 
   const set_file = () => {
@@ -56,33 +56,33 @@ const Assets: NextPage = () => {
     console.log(file);
   };
 
-  const mint = async () => {
-    console.log("Uploading file...");
-    console.log(file);
-    const rootCid = await client.put([file]);
-    console.log("Uploading file... stage2");
-    const res = await client.get(rootCid);
-    console.log(res);
-    const hash = rootCid;
-    console.log(hash);
-    const transactionID = await fcl.send([
-      fcl.transaction(mintNFT),
-      fcl.args([
-        fcl.arg(rootCid, t.String),
-        fcl.arg(file.name, t.String),
-        fcl.arg(pricePerDay, t.UFix64),
-        fcl.arg(priceStack, t.UFix64),
-      ]),
-      fcl.proposer(fcl.authz),
-      fcl.payer(fcl.authz),
-      fcl.authorizations([fcl.authz]),
-      fcl.limit(100),
-    ]).then((response: any) => {
-      const { transactionId } = response;
-      console.log(transactionId);
-      return fcl.tx(transactionId).onceSealed();
-    });
-  };
+  // const mint = async () => {
+  //   console.log("Uploading file...");
+  //   console.log(file);
+  //   const rootCid = await client.put([file]);
+  //   console.log("Uploading file... stage2");
+  //   const res = await client.get(rootCid);
+  //   console.log(res);
+  //   const hash = rootCid;
+  //   console.log(hash);
+  //   const transactionID = await fcl.send([
+  //     fcl.transaction(mintNFT),
+  //     fcl.args([
+  //       fcl.arg(rootCid, t.String),
+  //       fcl.arg(file.name, t.String),
+  //       fcl.arg(pricePerDay, t.UFix64),
+  //       fcl.arg(priceStack, t.UFix64),
+  //     ]),
+  //     fcl.proposer(fcl.authz),
+  //     fcl.payer(fcl.authz),
+  //     fcl.authorizations([fcl.authz]),
+  //     fcl.limit(100),
+  //   ]).then((response: any) => {
+  //     const { transactionId } = response;
+  //     console.log(transactionId);
+  //     return fcl.tx(transactionId).onceSealed();
+  //   });
+  // };
   
 
   useEffect(() => {
