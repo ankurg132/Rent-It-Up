@@ -143,12 +143,11 @@ const Assets: NextPage = () => {
         </Flex>
         <Button onClick={() => login()} colorScheme="teal" variant="solid">Log in</Button>
         <Heading as="h3" size="md" mt={4}>Your address is: {user && user.addr ? user.addr : ''}</Heading>        <form >
-          <Box bg="white" p={6} round
+          <Box bg="white" p={6} rounded="lg">
 
 {/* export function send(arg0: any[]) {
               throw new Error("Function not implemented.");
-            }
-ed="lg"> */}
+           */ }
                         
             <Box mb={4}>
               <Text color="gray.700" fontWeight="medium" mb={2}>
