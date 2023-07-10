@@ -95,9 +95,9 @@ const Assets: NextPage = () => {
     // Add your submit logic here, e.g. sending the form data to your API
   };
 
-  // const login = () => {
+  const login = () => {
   //   fcl.authenticate();
-  // };
+  };
 
 
 
