@@ -10,7 +10,7 @@ const Test: NextPage = () => {
       {/* <Navbar /> */}
       <AppLayout>
       <Box padding="4">
-        <Heading size="lg">Welcome to the 'Test' Page!</Heading>
+        <Heading size="lg">Welcome to the Test Page!</Heading>
         {/* Add your desired content here */}
       </Box>
       </AppLayout>  
