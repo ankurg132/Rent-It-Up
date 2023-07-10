@@ -131,7 +131,7 @@ const Home: NextPage = () => {
              
             </Stack>
           </Box>
-          <img src={ bgpic2} alt="" />
+          <img alt="" />
           <Box
             w={{
               base: "full",
