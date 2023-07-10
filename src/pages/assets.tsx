@@ -85,9 +85,9 @@ const Assets: NextPage = () => {
   // };
   
 
-  useEffect(() => {
-    fcl.currentUser().subscribe(setUser);
-  }, []);
+  // useEffect(() => {
+  //   fcl.currentUser().subscribe(setUser);
+  // }, []);
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
