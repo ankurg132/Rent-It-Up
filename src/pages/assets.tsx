@@ -33,9 +33,9 @@ const Assets: NextPage = () => {
   const [priceStack, setPriceStack] = useState<string>();
   const [pricePerDay, setPricePerDay] = useState<string>();
 
-  // const setUserTx = async () => {
-  //   console.log("Setting up user");
-  //   const transactionID = await fcl.send([
+  const setUserTx = async () => {
+    console.log("Setting up user");
+    const transactionID = await fcl.send([
   //     fcl.transaction(setupUserTx),
   //     fcl.args([]),
   //     fcl.proposer(fcl.authz),
@@ -47,7 +47,7 @@ const Assets: NextPage = () => {
   //     console.log(transactionId);
   //     return fcl.tx(transactionId).onceSealed();
   //   });
-  // };
+  };
   
 
   const set_file = () => {
